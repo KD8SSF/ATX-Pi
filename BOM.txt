@@ -1,7 +1,23 @@
 ATX-Pi bill of materials version 2.0
 
 Mouser:
+1 x 556-ATMEGA328P-PU   (ATMega328P uC)
+5 x 279-CFR25J330R      (330 ohm 1/4 w resistor)
+1 x 279-CFR25J1K0       (1k ohm 1/4 w resistor)
+2 x 140-50N5-220J-RC    (22pF ceramic disc capacitor)
+1 x 815-ABL-16-B2       (16 Mhz crystal)
+1 x 871-B41828A5107M000 (capacitor)
+1 x 140-REA100M1EBK0511P(capacitor)
+1 x 595-SN74LVC245AN    (SN74LVC245 Logic level converter)
 
 Digikey:
+1 x 160-1131-ND         (Green LED) 
+1 x 751-1139-ND         (Red LED)
+1 x 751-1153-ND         (Yellow LED)
+1 x A100210-ND          (28 position IC socket)
+1 x CF14JT10K0CT-ND     (10k ohm 1/4 w resistor)
 
 Sparkfun:
+3 x PRT-08084           (Screw terminal)
+1 x PRT-09011           (USB-A Female SMD connector)
+1 x PRT-09498           (Right Angle ATX power supply connector)
