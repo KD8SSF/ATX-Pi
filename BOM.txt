@@ -9,6 +9,7 @@ Mouser:
 1 x 871-B41828A5107M000 (capacitor)
 1 x 140-REA100M1EBK0511P(capacitor)
 1 x 595-SN74LVC245AN    (SN74LVC245 Logic level converter)
+1 x 571-1-390261-3      (20 position IC socket)
 
 Digikey:
 1 x 160-1131-ND         (Green LED) 
