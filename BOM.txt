@@ -11,7 +11,8 @@ Mouser:
 1 x 595-SN74LVC245AN    (SN74LVC245 Logic level converter)
 1 x 571-1-390261-6      (20 position IC socket)
 1 x 538-39-30-1240      (possible ATX connector replacement, unit price 3.56)
-3 x 571-284391-2        (possible SFE screw terminal replacement)
+3 x 571-284391-2        (possible SFE screw terminal replacement, untested)
+1 x 806-KUSBXSMTAS1N-W  (possible SFE USB-A replacement, untested)
 
 Digikey:
 1 x 160-1131-ND         (Green LED) 
