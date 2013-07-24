@@ -6,10 +6,11 @@ Mouser:
 1 x 279-CFR25J1K0       (1k ohm 1/4 w resistor)
 2 x 140-50N5-220J-RC    (22pF ceramic disc capacitor)
 1 x 815-ABL-16-B2       (16 Mhz crystal)
-1 x 871-B41828A5107M000 (capacitor)
-1 x 140-REA100M1EBK0511P(capacitor)
+1 x 871-B41828A5107M000 (100uF capacitor)
+1 x 140-REA100M1EBK0511P(10uF capacitor)
 1 x 595-SN74LVC245AN    (SN74LVC245 Logic level converter)
-1 x 571-1-390261-3      (20 position IC socket)
+1 x 571-1-390261-6      (20 position IC socket)
+1 x 538-39-30-1240      (possible ATX connector replacement, unit price 3.56)
 
 Digikey:
 1 x 160-1131-ND         (Green LED) 
@@ -17,8 +18,9 @@ Digikey:
 1 x 751-1153-ND         (Yellow LED)
 1 x A100210-ND          (28 position IC socket)
 1 x CF14JT10K0CT-ND     (10k ohm 1/4 w resistor)
+1 x WM1362-ND           (possible ATX connector replacement, unit price 3.78)
 
 Sparkfun:
 3 x PRT-08084           (Screw terminal)
 1 x PRT-09011           (USB-A Female SMD connector)
-1 x PRT-09498           (Right Angle ATX power supply connector)
+1 x PRT-09498           (Right Angle ATX power supply connector, out of stock until September 2013, unit price 1.95)
