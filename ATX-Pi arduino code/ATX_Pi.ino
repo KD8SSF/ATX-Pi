@@ -17,10 +17,10 @@
     
     Purpose:
     This code enables the use of any standard ATX 2.0 power supply with a Raspberry Pi. 
-    Gerber files for board production are avilable at: <https://github.com/KD8SSF/RPI_ATX_breakout>
+    Gerber files for board production are avilable at: <https://github.com/KD8SSF/ATX-PI>
     Inspired by the "ATX Raspi" from Low Power Lab. Please see <http://lowpowerlab.com/atxraspi/#installation> 
-    for details regarding installation of the accompanying script on your Raspberry Pi. Please note with 
-    this implementation connections to pins 7 and 8 on the RPi GPIO are the only ones required, 
+    Script installation instructions available at www.kd8ssf.com/atx-pi
+    Please note with this implementation connections to pins 7 and 8 on the RPi GPIO are the only ones required, 
     the power connection will be handled by the USB-A port on the board. 
 */
 
