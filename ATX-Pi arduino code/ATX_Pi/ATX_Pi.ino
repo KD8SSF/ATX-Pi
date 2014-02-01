@@ -24,6 +24,7 @@
     the power connection will be handled by the USB-A port on the board. 
 */
 
+#include <EEPROM.h>
 
 // Pin assignments
 const int CaseSwitch = 2;   //PC case power switch
@@ -41,8 +42,12 @@ const int HALTOK = 9;       //input from RPi on good shutdown
 // Variables
 int STATUS = 0;             //track STDBY/PWRON/PWROFF modes
 int buttonState = 1;        //state of the Case switch
-int button_delay = 0;        //how many seconds the button has been held down
+int button_delay = 0;       //how many seconds the button has been held down
 int psStatus = 0;           //is the PSU on?
+int autoPWR = 0;            //resume from power loss, stored in on-board EEPROM 
+int romVal = 1;             //write this to EEPROM when PSU is turned on
+int autoOn = 0;             //has the PSU been turned on automatically after power was restored?
+int romClr = 0;             //write this to EEPROM when shutdown has been signalled by button press
 
 void setup () {
   //Serial.begin(9600);
@@ -62,6 +67,7 @@ void setup () {
   digitalWrite(PWRONLED, LOW);
   digitalWrite(PWROFFLED, LOW);
   digitalWrite(RPISD, LOW);
+  autoPWR = EEPROM.read(0);                  //read EEPROM address zero when Program starts. 
   //Serial.println("Setup complete,starting loop");
 }
 
@@ -70,6 +76,17 @@ void loop () {
   //Serial.println(psStatus);
   
   buttonState = digitalRead(CaseSwitch);    //read the switch at the start of the loop
+  
+  if(autoPWR == 1 && autoOn == 0) {
+         digitalWrite(STDBYLED, LOW);      //If the PSU hasn't turned on yet nothing happens. If power was lost after the PSU was turned on, the board will default to turning on the PSU
+         digitalWrite(PWRONLED, HIGH);
+         digitalWrite(CasePowerLED, HIGH);
+         digitalWrite(PSON, LOW);
+         psStatus = 1;
+         button_delay = 0;
+         autoOn = 1; 
+      }
+  else
   
   while (buttonState == LOW) {
     //Serial.println("Button pressed!");
@@ -94,6 +111,7 @@ void loop () {
          digitalWrite(CasePowerLED, HIGH);
          digitalWrite(PSON, LOW);
          psStatus = 1;
+         EEPROM.write(0, romVal);
          button_delay = 0;
          break; 
         }
@@ -112,7 +130,8 @@ void loop () {
         digitalWrite(RPISD, LOW);
         psStatus = 0;
         button_delay = 0;
-        STATUS = 0;
+        STATUS = 0;                        
+        EEPROM.write(0, romClr);
       }
       else {
         if (digitalRead(HALTOK) == HIGH) {   //blink the case "HDD activity" LED while waiting on the RPi HALT-OK signal
